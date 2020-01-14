@@ -38,7 +38,7 @@ modules:
         sha256: 53cbf5be268d37ae2357de75cffe6758c9a6f41ef47b31368e642f012fd8cc8d
         size: 43063
         x-checker-data:
-          type: rotating-url
+          type: html
           url: https://teamspeak.com/en/downloads/
           pattern: https://files.teamspeak-services.com/releases/client/([0-9.]+)/TeamSpeak3-Client-linux_x86-([0-9.]+).run
       - type: extra-data
