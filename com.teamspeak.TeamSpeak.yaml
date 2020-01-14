@@ -34,9 +34,9 @@ modules:
         only-arches:
           - i386
         filename: TeamSpeak3-Client.run
-        url: https://files.teamspeak-services.com/releases/client/3.3.2/TeamSpeak3-Client-linux_x86-3.3.2.run
-        sha256: c2fa7272a7542eb7f15170b386b8b2597e34aca8c5afcdff429b2c46672f5433
-        size: 94323084
+        url: https://teamspeak.com/en/downloads/
+        sha256: 53cbf5be268d37ae2357de75cffe6758c9a6f41ef47b31368e642f012fd8cc8d
+        size: 43063
         x-checker-data:
           type: rotating-url
           url: https://teamspeak.com/en/downloads/
@@ -45,9 +45,9 @@ modules:
         only-arches:
           - x86_64
         filename: TeamSpeak3-Client.run
-        url: https://files.teamspeak-services.com/releases/client/3.3.2/TeamSpeak3-Client-linux_amd64-3.3.2.run
-        sha256: f1c2c399b4277bb7ffd5ffdf82260949c02ebe4df517f6dc2ab2b763743321d9
-        size: 95632176
+        url: https://teamspeak.com/en/downloads/
+        sha256: 5f02a0e4bfcfa31880b7898b948d028b426bc658ea60e6ab46149d0bdb576ca3
+        size: 43063
         x-checker-data:
           type: rotating-url
           url: https://teamspeak.com/en/downloads/
