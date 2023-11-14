@@ -18,16 +18,16 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/flathub/com.teamspeak.TeamSpeak/beta/screenshots/teamspeak1.jpg</image>
+      <image>https://raw.githubusercontent.com/flathub/com.teamspeak.TeamSpeak/beta/screenshots/teamspeak1.png</image>
     </screenshot>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/flathub/com.teamspeak.TeamSpeak/beta/screenshots/teamspeak2.jpg</image>
+      <image>https://raw.githubusercontent.com/flathub/com.teamspeak.TeamSpeak/beta/screenshots/teamspeak2.png</image>
     </screenshot>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/flathub/com.teamspeak.TeamSpeak/beta/screenshots/teamspeak3.jpg</image>
+      <image>https://raw.githubusercontent.com/flathub/com.teamspeak.TeamSpeak/beta/screenshots/teamspeak3.png</image>
     </screenshot>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/flathub/com.teamspeak.TeamSpeak/beta/screenshots/teamspeak4.jpg</image>
+      <image>https://raw.githubusercontent.com/flathub/com.teamspeak.TeamSpeak/beta/screenshots/teamspeak4.png</image>
     </screenshot>
   </screenshots>
   <update_contact>michal.konecny@pacse.eu</update_contact>
@@ -37,6 +37,5 @@
   </content_rating>
   <releases>
     <release version="5.0.0-beta77" date="2024-01-10"/>
-    <release version="5.0.0-beta76" date="2023-11-12"/>
   </releases>
 </component>

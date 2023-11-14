@@ -1,13 +1,13 @@
-This is a flatpak repository for [TeamSpeak project](https://teamspeak.com/) on Flathub.
+This is a beta branch for TeamSpeak on Flathub.
 
-You can install it by adding flathubremote:
-
-```
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-```
-
-and installing the TeamSpeak from remote
+You can install it by adding flathub-beta remote:
 
 ```
-flatpak install flathub com.teamspeak.TeamSpeak
+flatpak remote-add flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
+```
+
+and installing the TeamSpeak from beta repository
+
+```
+flatpak install flathub-beta com.teamspeak.TeamSpeak
 ```
