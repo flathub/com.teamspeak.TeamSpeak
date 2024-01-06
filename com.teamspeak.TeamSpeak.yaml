@@ -1,10 +1,10 @@
 app-id: com.teamspeak.TeamSpeak
 tags:
   - proprietary
-runtime: org.gnome.Platform
-runtime-version: '45'
-sdk: org.gnome.Sdk
-command: teamspeak5
+runtime: org.freedesktop.Platform
+runtime-version: '23.08'
+sdk: org.freedesktop.Sdk
+command: teamspeak
 finish-args:
   - --socket=x11
   - --socket=pulseaudio
