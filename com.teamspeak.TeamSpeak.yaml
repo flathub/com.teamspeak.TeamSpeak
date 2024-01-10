@@ -1,24 +1,31 @@
 app-id: com.teamspeak.TeamSpeak
 tags:
   - proprietary
-runtime: org.gnome.Platform
-runtime-version: '45'
-sdk: org.gnome.Sdk
-command: teamspeak5
+runtime: org.freedesktop.Platform
+runtime-version: '23.08'
+sdk: org.freedesktop.Sdk
+command: teamspeak
 finish-args:
   - --socket=x11
   - --socket=pulseaudio
   - --share=ipc
   - --share=network
   - --device=dri
+  - --persist=.ts3client
   - --filesystem=xdg-download
   - --env=SSL_CERT_DIR=/etc/ssl/certs
 modules:
-  - name: teamspeak5
+  - name: libevent
+    buildsystem: cmake
+    sources:
+      - type: archive
+        url: https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz
+        sha256: 92e6de1be9ec176428fd2367677e61ceffc2ee1cb119035037a27d346b0403bb
+  - name: teamspeak3
     buildsystem: simple
     build-commands:
       - install -D apply_extra /app/bin/apply_extra
-      - install -D teamspeak5 /app/bin/teamspeak5
+      - install -D teamspeak /app/bin/teamspeak
       - install -Dm644 -t /app/share/metainfo com.teamspeak.TeamSpeak.appdata.xml
       - install -Dm644 -t /app/share/applications com.teamspeak.TeamSpeak.desktop
       - install -Dm644 -t /app/share/icons/hicolor/128x128/apps com.teamspeak.TeamSpeak.png
@@ -32,21 +39,21 @@ modules:
       - type: extra-data
         only-arches:
           - x86_64
-        filename: teamspeak-client.tar.gz
-        url: https://files.teamspeak-services.com/pre_releases/client/5.0.0-beta77/teamspeak-client.tar.gz
-        sha256: 6f3bf97b120d3c799cefc90c448e45836708a826d7caa07ad32b5c868eb9181b
-        size: 149815295
+        filename: TeamSpeak3-Client.run
+        url: https://files.teamspeak-services.com/releases/client/3.6.2/TeamSpeak3-Client-linux_amd64-3.6.2.run
+        sha256: 59f110438971a23f904a700e7dd0a811cf99d4e6b975ba3aa45962d43b006422
+        size: 110899830
         x-checker-data:
           type: html
-          url: https://teamspeak.com/en/downloads/
-          version-pattern: https://files.teamspeak-services.com/pre_releases/client/([\.\-beta\d]+)
-          url-template: https://files.teamspeak-services.com/pre_releases/client/$version/teamspeak-client.tar.gz
+          url: https://files.teamspeak-services.com/releases/client/
+          version-pattern: (\d+\.\d+\.\d+)
+          url-template: https://files.teamspeak-services.com/releases/client/$version/TeamSpeak3-Client-linux_amd64-$version.run
       - type: script
         dest-filename: apply_extra
         commands:
-          - tar xf teamspeak-client.tar.gz
-          - rm -f teamspeak-client.tar.gz
+          - sh TeamSpeak3-Client.run --tar xf
+          - rm -f TeamSpeak3-Client.run
       - type: script
-        dest-filename: teamspeak5
+        dest-filename: teamspeak
         commands:
-          - exec /app/extra/TeamSpeak "$@"
+          - exec /app/extra/ts3client_runscript.sh "$@"
