@@ -12,7 +12,7 @@ finish-args:
   - --share=network
   - --device=dri
   - --filesystem=xdg-download
-  - --filesystem=~/.config/TeamSpeak/:rw
+  - --filesystem=xdg-config/TeamSpeak
   - --env=SSL_CERT_DIR=/etc/ssl/certs
 modules:
   - name: teamspeak5
