@@ -8,6 +8,7 @@ command: teamspeak
 finish-args:
   - --socket=x11
   - --socket=pulseaudio
+  - --talk-name=org.freedesktop.Notifications
   - --share=ipc
   - --share=network
   - --device=dri
