@@ -12,6 +12,8 @@ finish-args:
   - --talk-name=org.freedesktop.UPower
   - --talk-name=com.endlessm.ParentalControls.AppFilter
   - --talk-name=org.freedesktop.Accounts
+  - --talk-name=org.freedesktop.DBus.Properties
+  - --talk-name=org.freedesktop.DBus.ObjectManager
   - --share=ipc
   - --share=network
   - --device=dri
