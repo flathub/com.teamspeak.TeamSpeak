@@ -10,7 +10,6 @@ finish-args:
   - --socket=pulseaudio
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.freedesktop.UPower
-  - --talk-name=com.endlessm.ParentalControls.AppFilter
   - --talk-name=org.freedesktop.Accounts
   - --share=ipc
   - --share=network
