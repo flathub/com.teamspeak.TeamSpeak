@@ -4,10 +4,13 @@ tags:
 runtime: org.freedesktop.Platform
 runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
-command: teamspeak5
+command: teamspeak
 finish-args:
   - --socket=x11
   - --socket=pulseaudio
+  - --talk-name=org.freedesktop.Notifications
+  - --talk-name=org.freedesktop.UPower
+  - --talk-name=org.freedesktop.Accounts
   - --share=ipc
   - --share=network
   - --device=dri
@@ -15,11 +18,11 @@ finish-args:
   - --filesystem=xdg-config/TeamSpeak
   - --env=SSL_CERT_DIR=/etc/ssl/certs
 modules:
-  - name: teamspeak5
+  - name: teamspeak
     buildsystem: simple
     build-commands:
       - install -D apply_extra /app/bin/apply_extra
-      - install -D teamspeak5 /app/bin/teamspeak5
+      - install -D teamspeak /app/bin/teamspeak
       - install -Dm644 -t /app/share/metainfo com.teamspeak.TeamSpeak.appdata.xml
       - install -Dm644 -t /app/share/applications com.teamspeak.TeamSpeak.desktop
       - install -Dm644 -t /app/share/icons/hicolor/128x128/apps com.teamspeak.TeamSpeak.png
@@ -34,9 +37,9 @@ modules:
         only-arches:
           - x86_64
         filename: teamspeak-client.tar.gz
-        url: https://files.teamspeak-services.com/pre_releases/client/5.0.0-beta77/teamspeak-client.tar.gz
-        sha256: 6f3bf97b120d3c799cefc90c448e45836708a826d7caa07ad32b5c868eb9181b
-        size: 149815295
+        url: https://files.teamspeak-services.com/pre_releases/client/6.0.0-beta2/teamspeak-client.tar.gz
+        sha256: de334fbf7b90d91ced475a785d034b520e4856bbd6fdd71db6a5dd88624a552b
+        size: 177781467
         x-checker-data:
           type: html
           url: https://teamspeak.com/en/downloads/
@@ -48,6 +51,6 @@ modules:
           - tar xf teamspeak-client.tar.gz
           - rm -f teamspeak-client.tar.gz
       - type: script
-        dest-filename: teamspeak5
+        dest-filename: teamspeak
         commands:
           - exec /app/extra/TeamSpeak "$@"
