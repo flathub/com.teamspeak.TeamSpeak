@@ -36,6 +36,81 @@
     <content_attribute id="social-audio">intense</content_attribute>
   </content_rating>
   <releases>
+    <release version="6.0.0-beta3" date="2025-10-14">
+      <description>
+        <p><strong>What’s New</strong></p>
+        <ul>
+          <li>Added FFmpeg hardware-acceleration for streams, supporting AMD AMF, Intel QSV and NVIDIA NVENC</li>
+          <li>Added support for Two-Factor-Authentication - secure your account with an additional layer of security</li>
+          <li>Added support to stream on Mac</li>
+          <li>Added support for ARM on macOS</li>
+          <li>Added support for Pipewire Capturing under Wayland</li>
+          <li>Added new stream rendering system</li>
+          <li>Added support for OpenH264</li>
+          <li>Added support for P2P streaming with single-encoding, saving resources when streaming to multiple users</li>
+          <li>Added dynamic codec selection for streams, automatically choosing the best codec for your viewers</li>
+          <li>Added connection info for inbound streams</li>
+          <li>Added more in-depth statistics for outbound streams</li>
+          <li>Added support to start focused application via hotkey on Linux</li>
+          <li>Added new auto-focus behavior that can be manually overwritten - focuses a single screenshare when in a meeting-like group</li>
+          <li>Added support to hide own, inactive or individual video streams</li>
+          <li>Added drag-and-drop support for activities in the sidebar</li>
+          <li>Added support to preserve the order of restored activities after client restarts</li>
+          <li>Added support to search for users and their custom nicknames inside the group info</li>
+          <li>Added support to auto-connect to a bookmark on startup with the microphone muted</li>
+        </ul>
+        <p><strong>Improvements</strong></p>
+        <ul>
+          <li>Improved auto-focus behavior of a streaming sessions with only one screenshare, allowing you to unfocus it again</li>
+          <li>Improved loading time of group info in large groups</li>
+          <li>Improved loading time of <strong>@mentions</strong> in large groups</li>
+          <li>Improved memory usage of chat members, emojis and translations - <em><strong>reductions of 90% in some cases</strong></em></li>
+          <li>Improved spacings &amp; design of compact chats</li>
+          <li>Improved design of small outbound streams in the servertree overlay</li>
+          <li>Improved caching on the account page to reduce pop-in of data</li>
+          <li>Improved error messages when logging in to myTS fails</li>
+          <li>Improved default chat permissions to allow everyone to start video streaming in new group chats</li>
+          <li>Improved design of changelog entries</li>
+          <li>Improved unified look of drag-and-drop actions for activities, contacts, rooms and badges</li>
+        </ul>
+        <p><strong>Bug Fixes</strong></p>
+        <ul>
+          <li>Fixed stream notifications being shown on startup</li>
+          <li>Fixed not being able to connect to some servers when existing server activities were present</li>
+          <li>Fixed '<em>Is this your Server</em> ’ dialog not being closeable</li>
+          <li>Fixed audio issues when leaving streams</li>
+          <li>Fixed not being able to login when pasting credentials using mouse-only</li>
+          <li>Fixed not showing the first-launch tour and setup</li>
+          <li>Fixed being able to close the client while transfers are running</li>
+          <li>Fixed '<em>Recent Server Events</em> '-dialog overlaying the sidebar</li>
+          <li>Fixed not setting linux window-metadata correctly</li>
+          <li>Fixed not applying last used quality settings when using the '<em>Stream current focus application</em> '-hotkey</li>
+          <li>Fixed stream overlay spanning the whole servertree</li>
+          <li>Fixed not showing a warning for greylisted servers</li>
+          <li>Fixed fetching unknown language files in some cases</li>
+          <li>Fixed issue with some toggles not working on first try</li>
+          <li>Fixed application hanging in some cases when rapidly changing audio-support of streams</li>
+          <li>Fixed start-stream dialog not closing in some cases after going live</li>
+          <li>Fixed not being able to rejoin a stream after client restart</li>
+          <li>Fixed stream join request not being shown when switching between stream and info view</li>
+          <li>Fixed showing stream notifications on startup</li>
+          <li>Fixed potentially switching the audio-enabled server when changing audio settings</li>
+          <li>Fixed always using the highest possible camera resolution and not saving the user-specified resolution</li>
+          <li>Fixed audio device list not being updated on linux pulseaudio backends</li>
+          <li>Fixed not saving capture device when switching it from the recovery overlay in the servertree</li>
+          <li>Fixed not potentially showing all community servers on the dashboard</li>
+          <li>Fixed audio meter showing jittery and incorrect values</li>
+          <li>Fixed being able to connect to an empty server via dashboard</li>
+          <li>Fixed not being able to capture some fullscreen borderless games</li>
+          <li>Fixed '<em>Minimize to Tray</em> ’ permanently hiding stream popouts</li>
+          <li>Fixed not restoring audio settings for rejoined streams</li>
+          <li>Fixed not displaying kick or ban information for streams</li>
+          <li>Fixed channel banners possibly ‘sliding in’ when switching between two server views</li>
+          <li>Fixed app icon not rendering on Linux Wayland</li>
+          <li>Fixed auto-complete highlighting having wrong background color in matrix chats</li>
+        </ul>
+      </description>
+    </release>
     <release version="6.0.0-beta2" date="2025-01-21"/>
   </releases>
 </component>
