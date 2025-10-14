@@ -38,7 +38,7 @@
   <releases>
     <release version="6.0.0-beta3" date="2025-10-14">
       <description>
-        <p><strong>What’s New</strong></p>
+        <p>What’s New</p>
         <ul>
           <li>Added FFmpeg hardware-acceleration for streams, supporting AMD AMF, Intel QSV and NVIDIA NVENC</li>
           <li>Added support for Two-Factor-Authentication - secure your account with an additional layer of security</li>
@@ -59,12 +59,12 @@
           <li>Added support to search for users and their custom nicknames inside the group info</li>
           <li>Added support to auto-connect to a bookmark on startup with the microphone muted</li>
         </ul>
-        <p><strong>Improvements</strong></p>
+        <p>Improvements</p>
         <ul>
           <li>Improved auto-focus behavior of a streaming sessions with only one screenshare, allowing you to unfocus it again</li>
           <li>Improved loading time of group info in large groups</li>
-          <li>Improved loading time of <strong>@mentions</strong> in large groups</li>
-          <li>Improved memory usage of chat members, emojis and translations - <em><strong>reductions of 90% in some cases</strong></em></li>
+          <li>Improved loading time of @mentions in large groups</li>
+          <li>Improved memory usage of chat members, emojis and translations - <em>reductions of 90% in some cases</em></li>
           <li>Improved spacings &amp; design of compact chats</li>
           <li>Improved design of small outbound streams in the servertree overlay</li>
           <li>Improved caching on the account page to reduce pop-in of data</li>
@@ -73,7 +73,7 @@
           <li>Improved design of changelog entries</li>
           <li>Improved unified look of drag-and-drop actions for activities, contacts, rooms and badges</li>
         </ul>
-        <p><strong>Bug Fixes</strong></p>
+        <p>Bug Fixes</p>
         <ul>
           <li>Fixed stream notifications being shown on startup</li>
           <li>Fixed not being able to connect to some servers when existing server activities were present</li>
