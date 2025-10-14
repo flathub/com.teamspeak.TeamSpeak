@@ -6,7 +6,7 @@ runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: teamspeak
 finish-args:
-  - --socket=x11
+  - --socket=wayland
   - --socket=pulseaudio
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.freedesktop.UPower
