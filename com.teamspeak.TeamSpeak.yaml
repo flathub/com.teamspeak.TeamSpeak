@@ -15,8 +15,6 @@ finish-args:
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.freedesktop.UPower
   - --talk-name=org.freedesktop.Accounts
-  - --talk-name=org.freedesktop.portal.Desktop
-  - --talk-name=org.freedesktop.portal.Settings
   - --filesystem=xdg-download
   - --filesystem=xdg-config/TeamSpeak
   - --env=SSL_CERT_DIR=/etc/ssl/certs
