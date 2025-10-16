@@ -7,14 +7,16 @@ sdk: org.freedesktop.Sdk
 command: teamspeak
 finish-args:
   - --socket=wayland
-  - --socket=fallback-x11
+  - --socket=x11
   - --socket=pulseaudio
+  - --device=dri
+  - --share=network
+  - --share=ipc
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.freedesktop.UPower
   - --talk-name=org.freedesktop.Accounts
-  - --share=ipc
-  - --share=network
-  - --device=dri
+  - --talk-name=org.freedesktop.portal.Desktop
+  - --talk-name=org.freedesktop.portal.Settings
   - --filesystem=xdg-download
   - --filesystem=xdg-config/TeamSpeak
   - --env=SSL_CERT_DIR=/etc/ssl/certs
