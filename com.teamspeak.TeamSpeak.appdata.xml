@@ -36,6 +36,19 @@
     <content_attribute id="social-audio">intense</content_attribute>
   </content_rating>
   <releases>
+    <release version="6.0.0-beta3.1" date="2025-10-16">
+      <description>
+        <p>Improvements</p>
+        <ul>
+          <li>Improved startup time by adding fully asynchronous loading/testing of FFmpeg hardware backends</li>
+        </ul>
+        <p>Fixes</p>
+        <ul>
+          <li>Fixed Client crash when chat-services are temporarily unavailable</li>
+          <li>Fixed Client crash when using incomplete or corrupt AMD iGPU drivers</li>
+        </ul>
+      </description>
+    </release>
     <release version="6.0.0-beta3" date="2025-10-14">
       <description>
         <p>What’s New</p>
