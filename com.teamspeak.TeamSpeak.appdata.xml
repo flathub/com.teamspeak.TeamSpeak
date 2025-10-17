@@ -36,6 +36,14 @@
     <content_attribute id="social-audio">intense</content_attribute>
   </content_rating>
   <releases>
+    <release version="6.0.0-beta3.2" date="2025-10-17">
+      <description>
+        <p>Fixes</p>
+        <ul>
+          <li>Fix UTF-8 encoded string handling in filepaths for cache/settings creation and file-transfer operations</li>
+        </ul>
+      </description>
+    </release>
     <release version="6.0.0-beta3.1" date="2025-10-16">
       <description>
         <p>Improvements</p>
