@@ -55,4 +55,9 @@ modules:
       - type: script
         dest-filename: teamspeak
         commands:
-          - exec /app/extra/TeamSpeak "$@"
+          # NOTE: Remove --ozone-platform=x11 once GlobalShortcut Portal
+          # is used and Wayland support is fully implemented.
+          # We'll use XWayland for now, in order to use Hotkeys
+          #
+          # See https://community.teamspeak.com/t/teamspeak-6-0-0-beta3-3-minor-update/62656
+          - exec /app/extra/TeamSpeak --ozone-platform=x11 "$@"
