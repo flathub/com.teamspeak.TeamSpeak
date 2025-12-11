@@ -35,6 +35,58 @@
     <content_attribute id="social-chat">intense</content_attribute>
     <content_attribute id="social-audio">intense</content_attribute>
   </content_rating>
+  <release version="6.0.0-beta3.4" date="2025-12-11">
+    <description>
+      <p>Improvements</p>
+      <ul>
+        <li>Added chat-message migration from beta3.2 and earlier to the new save format</li>
+        <li>Added support to view/download chat attachments sent by beta3.2 and earlier clients in channel chats</li>
+      </ul>
+      <p>Bug Fixes</p>
+      <ul>
+        <li>Fixed a rare crash when unfocusing the client when viewing a GIF from a chat attachment</li>
+      </ul>
+    </description>
+  </release>
+  <release version="6.0.0-beta3.3" date="2025-12-09">
+    <description>
+      <p>What’s New</p>
+      <ul>
+        <li>Added XDG_DOWNLOAD_DIR support for Linux systems to determine the default download location in user or system-wide configurations</li>
+        <li>Added configurable Audio Bitrate to improve audio quality for streams</li>
+        <li>Improved VAAPI hardware-acceleration detection and handling on Linux systems</li>
+        <li>Fixed Noise-Suppression cutting out low-volume stream audio in some cases</li>
+      </ul>
+      <p>Improvements</p>
+      <ul>
+        <li>Improved updater error-tolerance and added fallback mechanisms in case of failed patches</li>
+        <li>Improved streaming indicator in servertree and added Open-Chat action on click</li>
+        <li>Improved server tree scrolling; rendering performance and improved scroll position behavior when the tree changes outside the current view</li>
+        <li>Improved icon rendering performance, improving overall client performance</li>
+        <li>Added notice about hotkeys potentially not working when running the client under Wayland</li>
+        <li>Added missing translations for all languages</li>
+        <li>Added pointer indicator to more clickable elements</li>
+      </ul>
+      <p>Bug Fixes</p>
+      <ul>
+        <li>Fixed not being able to download any files due to a pathing issue</li>
+        <li>Fixed potential crashes on startup for systems with 0patch or similar software installed</li>
+        <li>Fixed potential crash when using pulseaudio devices (Linux only) without a proper description set, affecting e.g., ALVR users</li>
+        <li>Fixed sending files with Markdown-Tokens in the filename breaking when sent in channel chats</li>
+        <li>Fixed sharing file transfer URLs with whitespace characters or similar in the file path breaking the link</li>
+        <li>Fixed not capturing; forwarding startup arguments to the restarted client after updating</li>
+        <li>Fixed leaving a paused stream still showing the paused state</li>
+        <li>Fixed the paused state of streams not being propagated correctly to viewers in some cases</li>
+        <li>Fixed connect-on-startup not working for a newly created bookmark</li>
+        <li>Fixed showing hidden streams in the server tree overlay</li>
+        <li>Fixed showing Poked you in host notifications</li>
+        <li>Fixed badge names not being centered in some cases</li>
+        <li>Fixed exiting full-screen mode unexpectedly when another (non-full-screen) stream is closed</li>
+        <li>Fixed middle-click autoscrolling not being enabled on Linux</li>
+        <li>Fixed channel banners sometimes not being shown until hover, also now support SVG/AVIF formats</li>
+      </ul>
+    </description>
+  </release>
   <releases>
     <release version="6.0.0-beta3.2" date="2025-10-17">
       <description>
