@@ -35,6 +35,7 @@
     <content_attribute id="social-chat">intense</content_attribute>
     <content_attribute id="social-audio">intense</content_attribute>
   </content_rating>
+  <releases>
   <release version="6.0.0-beta3.4" date="2025-12-11">
     <description>
       <p>Improvements</p>
@@ -87,7 +88,6 @@
       </ul>
     </description>
   </release>
-  <releases>
     <release version="6.0.0-beta3.2" date="2025-10-17">
       <description>
         <p>Fixes</p>
