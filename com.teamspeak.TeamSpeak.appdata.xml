@@ -138,7 +138,7 @@
           <li>Improved loading time of group info in large groups</li>
           <li>Improved loading time of @mentions in large groups</li>
           <li>Improved memory usage of chat members, emojis and translations - <em>reductions of 90% in some cases</em></li>
-          <li>Improved spacings &amp; design of compact chats</li>
+          <li>Improved spacings design of compact chats</li>
           <li>Improved design of small outbound streams in the servertree overlay</li>
           <li>Improved caching on the account page to reduce pop-in of data</li>
           <li>Improved error messages when logging in to myTS fails</li>
