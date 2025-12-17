@@ -39,9 +39,9 @@ modules:
         only-arches:
           - x86_64
         filename: teamspeak-client.tar.gz
-        url: https://files.teamspeak-services.com/pre_releases/client/6.0.0-beta3.3/teamspeak-client.tar.gz
-        sha256: 1253dfcb703fc1acee1240750f652ea228cb32929f41398a7351517e05a1f29a
-        size: 191478245
+        url: https://files.teamspeak-services.com/pre_releases/client/6.0.0-beta3.4/teamspeak-client.tar.gz
+        sha256: b9ba408a0b58170ce32384fc8bba56800840d694bd310050cbadd09246d4bf27
+        size: 191483180
         x-checker-data:
           type: html
           url: https://teamspeak.com/en/downloads/
