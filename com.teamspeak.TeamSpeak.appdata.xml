@@ -9,12 +9,8 @@
   <developer_name>TeamSpeak Systems, Inc.</developer_name>
   <url type="homepage">https://www.teamspeak.com</url>
   <description>
-    <p>
-      TeamSpeak is the number one choice VoIP communication system for Online Gaming.
-    </p>
-    <p>
-      NOTE: This wrapper is not verified by, affiliated with, or supported by TeamSpeak Systems, Inc.
-    </p>
+    <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by TeamSpeak Systems, Inc.**</p>
+    <p>TeamSpeak is the number one choice VoIP communication system for Online Gaming.</p>
   </description>
   <screenshots>
     <screenshot type="default">
