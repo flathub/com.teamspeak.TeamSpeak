@@ -7,7 +7,7 @@ sdk: org.freedesktop.Sdk
 command: teamspeak
 finish-args:
   - --socket=wayland
-  - --socket=x11
+  - --socket=fallback-x11
   - --socket=pulseaudio
   - --device=all
   - --share=network
@@ -38,14 +38,14 @@ modules:
         only-arches:
           - x86_64
         filename: teamspeak-client.tar.gz
-        url: https://files.teamspeak-services.com/pre_releases/client/6.0.0-beta4.1/teamspeak-client.tar.gz
-        sha256: edfd154102dae0683baa05cc55fa0f60f6b33d103db98797db9d63de61da48ba
-        size: 205733762
+        url: https://files.teamspeak-services.com/pre_releases/client/6.0.0-beta5/teamspeak-client.tar.xz
+        sha256: 394472a25ee9c2419c44a5e71a401c21bffecf2fdcb27fbe2173d0fffd1875a4
+        size: 158957960
         x-checker-data:
           type: html
           url: https://teamspeak.com/en/downloads/
           version-pattern: https://files.teamspeak-services.com/pre_releases/client/([\.\-beta\d]+)
-          url-template: https://files.teamspeak-services.com/pre_releases/client/$version/teamspeak-client.tar.gz
+          url-template: https://files.teamspeak-services.com/pre_releases/client/$version/teamspeak-client.tar.xz
       - type: script
         dest-filename: apply_extra
         commands:
@@ -54,9 +54,9 @@ modules:
       - type: script
         dest-filename: teamspeak
         commands:
-          # NOTE: Remove --ozone-platform=x11 once GlobalShortcut Portal
-          # is used and Wayland support is fully implemented.
-          # We'll use XWayland for now, in order to use Hotkeys
-          #
-          # See https://community.teamspeak.com/t/teamspeak-6-0-0-beta3-3-minor-update/62656
-          - exec /app/extra/TeamSpeak --ozone-platform=x11 "$@"
+          - |
+            if [ -n "$WAYLAND_DISPLAY" ]; then
+              exec /app/extra/TeamSpeak --ozone-platform=wayland --enable-features=WaylandWindowDecorations "$@"
+            else
+              exec /app/extra/TeamSpeak --ozone-platform=x11 "$@"
+            fi
