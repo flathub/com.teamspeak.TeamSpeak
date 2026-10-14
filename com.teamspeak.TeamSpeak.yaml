@@ -2,7 +2,7 @@ app-id: com.teamspeak.TeamSpeak
 tags:
   - proprietary
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: '26.08'
 sdk: org.freedesktop.Sdk
 command: teamspeak
 finish-args:
@@ -37,7 +37,7 @@ modules:
       - type: extra-data
         only-arches:
           - x86_64
-        filename: teamspeak-client.tar.gz
+        filename: teamspeak-client.tar.xz
         url: https://files.teamspeak-services.com/pre_releases/client/6.0.0-beta5/teamspeak-client.tar.xz
         sha256: 394472a25ee9c2419c44a5e71a401c21bffecf2fdcb27fbe2173d0fffd1875a4
         size: 158957960
@@ -49,8 +49,8 @@ modules:
       - type: script
         dest-filename: apply_extra
         commands:
-          - tar xf teamspeak-client.tar.gz
-          - rm -f teamspeak-client.tar.gz
+          - tar xf teamspeak-client.tar.xz
+          - rm -f teamspeak-client.tar.xz
       - type: script
         dest-filename: teamspeak
         commands:
