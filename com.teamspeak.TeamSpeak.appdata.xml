@@ -35,6 +35,9 @@
     <content_attribute id="social-audio">intense</content_attribute>
   </content_rating>
   <releases>
+  <release version="6.0.0-beta5" date="2026-10-14">
+   <description></description>
+  </release>
   <release version="6.0.0-beta4.1" date="2026-05-27">
    <description></description>
   </release>
