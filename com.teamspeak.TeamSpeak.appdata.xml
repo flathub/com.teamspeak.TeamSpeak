@@ -5,7 +5,7 @@
   <name>TeamSpeak</name>
   <summary>TeamSpeak VoIP application</summary>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>LicenseRef-proprietary</project_license>
+  <project_license>LicenseRef-proprietary=https://www.teamspeak.com/en/terms-and-conditions</project_license>
   <developer_name>TeamSpeak Systems, Inc.</developer_name>
   <url type="homepage">https://www.teamspeak.com</url>
   <description>
