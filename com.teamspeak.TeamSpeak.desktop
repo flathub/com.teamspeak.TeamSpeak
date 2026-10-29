@@ -7,4 +7,4 @@ Terminal=false
 Type=Application
 Icon=com.teamspeak.TeamSpeak
 Categories=Network;Chat;
-StartupWMClass=teamspeak-client
+StartupWMClass=TeamSpeak
