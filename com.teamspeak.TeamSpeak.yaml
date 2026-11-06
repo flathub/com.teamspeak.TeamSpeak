@@ -7,7 +7,7 @@ sdk: org.freedesktop.Sdk
 command: teamspeak
 finish-args:
   - --socket=wayland
-  - --socket=fallback-x11
+  - --socket=x11
   - --socket=pulseaudio
   - --device=all
   - --share=network
@@ -56,7 +56,10 @@ modules:
         commands:
           - |
             if [ -n "$WAYLAND_DISPLAY" ]; then
-              exec /app/extra/TeamSpeak --ozone-platform=wayland --enable-features=WaylandWindowDecorations "$@"
+              echo "Using wayland"
+              exec /app/extra/TeamSpeak --ozone-platform=wayland --enable-features=WaylandWindowDecorations
+              --disable-vulkan "$@"
             else
+              echo "Using X11"
               exec /app/extra/TeamSpeak --ozone-platform=x11 "$@"
             fi
